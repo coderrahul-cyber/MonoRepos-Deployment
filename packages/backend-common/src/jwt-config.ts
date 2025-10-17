@@ -1,0 +1,1 @@
+export const JWTTOKENSECRET =process.env.JWTTOKENSECRET ||  "1212121";
