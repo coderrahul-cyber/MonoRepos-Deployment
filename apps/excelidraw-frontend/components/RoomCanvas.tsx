@@ -6,7 +6,7 @@ import Canvas from "./Canvas";
 
 export default  function RoomCanvas({roomId} : {roomId : string}) {
    const [loading , setLoading] =  useState(false);
-   const [socket , setSocket] = useState<WebSocket>();
+   const [socket , setSocket] = useState<WebSocket>("" as unknown as WebSocket);
 // For canvas we should put in different js floder
 useEffect(()=>{
     const ws = new WebSocket(`${WS_ENDPOINT}?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI0YjMyZDUxMS1kMzI5LTRjY2UtYTcwYS1hNGVjOWE3ODA0N2EiLCJpYXQiOjE3NTc3NzkwNzV9.XANfSqf_gH_1UKgsTozD4yN6WYOTCfcYcgPNqKZjHLI`);
@@ -19,6 +19,7 @@ useEffect(()=>{
         console.log("WebSocket connected");
         setLoading(true);
     }
+// eslint-disable-next-line react-hooks/exhaustive-deps
 } , [])
   
 

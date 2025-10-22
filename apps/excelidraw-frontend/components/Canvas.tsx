@@ -28,6 +28,7 @@ export default function Canvas({roomId , socket} : {roomId : string , socket : W
         g.destroy();
       })
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [canvasRef])
   return (
     <div style={{

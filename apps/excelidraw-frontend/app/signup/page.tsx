@@ -12,6 +12,7 @@ import { Sparkles, ArrowLeft, Eye, EyeOff, Check, Github } from 'lucide-react';
 
 export default function SignUp() {
   const [showPassword, setShowPassword] = useState(false);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [acceptTerms, setAcceptTerms] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [formData, setFormData] = useState({

@@ -85,7 +85,7 @@ export class Game {
       }
     });
   }
-  mouseUpHandler= (e)=>{
+  mouseUpHandler= (e  : MouseEvent)=>{
 
         this.clicked = false;
        const width = e.clientX - this.startX;
@@ -126,14 +126,14 @@ export class Game {
   }
 
 
-  mouseDownHandler = (e)=>{
+  mouseDownHandler = (e  : MouseEvent)=>{
       this.clicked = true ;
         this.startX = e.clientX;
         this.startY = e.clientY;
 
   }
 
-  mouseMoveHandler = (e)=>{
+  mouseMoveHandler = (e: MouseEvent)=>{
  if(this.clicked){
         const width = e.clientX - this.startX;
         const height = e.clientY - this.startY;

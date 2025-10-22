@@ -1,12 +1,17 @@
+"use client";
+
+import { useParams } from "next/navigation";
 import RoomCanvas from "@/components/RoomCanvas";
 
-export default async function Page({params} : {params : {roomId : string}}) {
-  const roomId = (await params).roomId;
+export default function Page() {
+  const params = useParams<{ roomId: string }>();
+  const roomId = params.roomId;
 
   console.log(roomId);
+
   return (
     <div>
-      <RoomCanvas roomId={roomId}/>
+      <RoomCanvas roomId={roomId} />
     </div>
-  )
+  );
 }
